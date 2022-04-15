@@ -15,11 +15,17 @@
 <meta property="og:site_name" content="波西米亚春风">
 <meta property="og:description" content="总而言之，这就是一篇用来记录我学习前端历程的日志，希望不要断更。 朝着优秀的前端工程师努力吧！">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20220414203242533.png">
+<meta property="og:image" content="http://img.smyhvae.com/2015-10-01-cnblogs_html_08.png">
+<meta property="og:image" content="http://img.smyhvae.com/2015-10-01-cnblogs_html_07.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180118_2340.png">
+<meta property="og:image" content="http://img.smyhvae.com/2015-10-01-cnblogs_html_10.png">
 <meta property="article:published_time" content="2022-04-14T04:14:15.000Z">
-<meta property="article:modified_time" content="2022-04-14T04:16:03.245Z">
+<meta property="article:modified_time" content="2022-04-14T13:42:15.721Z">
 <meta property="article:author" content="Chao Ishikami">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20220414203242533.png">
   
     <link rel="alternative" href="/atom.xml" title="波西米亚春风" type="application/atom+xml">
   
@@ -222,7 +228,87 @@
 <p>差不多</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">color</span>=<span class="string">&quot;#000000&quot;</span> <span class="attr">align</span>=<span class="string">&quot;right&quot;</span> <span class="attr">size</span>=<span class="string">&quot;5&quot;</span> <span class="attr">width</span>=<span class="string">&quot;60&quot;</span> <span class="attr">noshade</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>一个代码范例，包含了<code>&lt;hr&gt;</code>标签所能含有的属性们</p>
+<ul>
+<li><code>align=&quot;属性值&quot;</code>：设定线条置放位置。属性值可选择：left right center。</li>
+<li><code>size=&quot;2&quot;</code>：设定线条粗细。以像素为单位，内定为2。</li>
+<li><code>width=&quot;500&quot;</code>或<code>width=&quot;70%&quot;</code>：设定线条长度。可以是绝对值（单位是像素）或相对值。如果设置为相对值的话，内定为100%。</li>
+<li><code>color=&quot;#0000FF&quot;</code>：设置线条颜色。</li>
+<li><code>noshade</code>：不要阴影，即设定线条为平面显示。若没有这个属性则表明线条具阴影或立体。</li>
+</ul>
+<p><img src="C:\Users\HP\AppData\Roaming\Typora\typora-user-images\image-20220414203242533.png" alt="image-20220414203242533"></p>
+<h3 id="换行标签-lt-br-gt"><a href="#换行标签-lt-br-gt" class="headerlink" title="换行标签&lt;br\&gt;"></a>换行标签<code>&lt;br\&gt;</code></h3><p>如果希望某段文本强制换行显示，就需要使用换行标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This <span class="tag">&lt;<span class="name">br</span>/&gt;</span> is a para<span class="tag">&lt;<span class="name">br</span>/&gt;</span>graph with line breaks</span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p>就跟‘\n’差不多</p>
+</blockquote>
+<h3 id="lt-div-gt-和-lt-span-gt-标签"><a href="#lt-div-gt-和-lt-span-gt-标签" class="headerlink" title="&lt;div&gt;和&lt;span&gt;标签"></a><code>&lt;div&gt;</code>和<code>&lt;span&gt;</code>标签</h3><p>div和span是非常重要的标签，div的语义是division“分割”； span的语义就是span“范围、跨度”。想必你应该听说过“div + css”布局。（其实敲下这个教程的时候我没听过）</p>
+<ul>
+<li><strong>div标签</strong>：可以把标签中的内容分割为独立的区块。<strong>必须单独占据一行</strong>。</li>
+<li><strong>span标签</strong>：和div的作用一致，但不换行。</li>
+</ul>
+<p><img src="http://img.smyhvae.com/2015-10-01-cnblogs_html_08.png" alt="Paste_Image.png"></p>
+<h4 id="div和span的区别"><a href="#div和span的区别" class="headerlink" title="div和span的区别"></a>div和span的区别</h4><p><code>&lt;div&gt;</code>是容器级标签，其中可以放所有元素甚至div自己，它会导致浏览器显示换行</p>
+<p><code>&lt;span&gt;</code>是文本级标签，只能放置文字、图片以及表单元素，<strong>不能放p, h, ul, dl, ol, div等</strong>，但是它不会导致浏览器换行</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;logo&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;guanggao&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;dongxi&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上就是div+css布局的示例，div标签负责布局、结构、分块，css负责样式，二者通过class相连接</p>
+<blockquote>
+<p>div+css布局能精简代码，减少重构难度 | 提高网页访问速度 | 对搜索引擎优化友好 | 有较高的浏览器兼容性。</p>
+</blockquote>
+<h3 id="内容居中标签-lt-center-gt"><a href="#内容居中标签-lt-center-gt" class="headerlink" title="内容居中标签&lt;center&gt;"></a>内容居中标签<code>&lt;center&gt;</code></h3><p>之前我们见到的center基本都是align属性的一种取值，而在此处它作为双边标签出现，其中的所有元素都会居中</p>
+<p><strong>在HTML5中center标签不建议使用（包括前面提到的所有修改样式的标签基本都不推荐使用），而是建议使用css布局来实现</strong></p>
+<h3 id="预定义（预格式化）标签-lt-pre-gt"><a href="#预定义（预格式化）标签-lt-pre-gt" class="headerlink" title="预定义（预格式化）标签&lt;pre&gt;"></a>预定义（预格式化）标签<code>&lt;pre&gt;</code></h3><p>还记得前面在“HTML的基本语法特性”中提过的“浏览器在处理html文件时，如果有空格、换行、Tab都将被折叠为一个空格显示”</p>
+<p>而<code>&lt;pre&gt;</code>标签就可以将保留标签内部所有的空白字符并原封不动地输出</p>
+<p><img src="http://img.smyhvae.com/2015-10-01-cnblogs_html_07.png" alt="Paste_Image.png"></p>
+<blockquote>
+<p>真正排网页时这个标签几乎用不到（？</p>
+</blockquote>
+<hr>
+<h2 id="HTML标签-字体标签和超链接"><a href="#HTML标签-字体标签和超链接" class="headerlink" title="HTML标签-字体标签和超链接"></a>HTML标签-字体标签和超链接</h2><h3 id="字体标签"><a href="#字体标签" class="headerlink" title="字体标签"></a>字体标签</h3><h4 id="特殊字符（转义字符）"><a href="#特殊字符（转义字符）" class="headerlink" title="特殊字符（转义字符）"></a>特殊字符（转义字符）</h4><ul>
+<li><code>&amp;nbsp</code>：空格 （non-breaking spacing，不断打空格）</li>
+<li><code>&amp;lt</code>：小于号（less than）</li>
+<li><code>&amp;gt</code>：大于号（greater than）</li>
+<li><code>&amp;amp</code>：符号<code>&amp;</code></li>
+<li><code>&amp;quot</code>：双引号</li>
+<li><code>&amp;apos</code>：单引号</li>
+<li><code>&amp;copy</code>：版权<code>©</code></li>
+<li><code>&amp;trade</code>：商标<code>™</code></li>
+<li><code>&amp;deg</code>：摄氏度<code>°</code></li>
+<li><code>&amp;plusm</code>：正负号<code>±</code></li>
+<li><code>&amp;times</code>：乘号<code>×</code></li>
+<li><code>&amp;divide</code>：除号<code>÷</code></li>
+<li><code>&amp;sup2</code>：上标2<code>²</code></li>
+<li><code>&amp;sup3</code>：上标3<code>³</code></li>
+<li><code>&amp;#32464</code>：文字<code>绐</code>。其实，<code>#32464</code>是汉字<code>绐</code>的unicode编码。</li>
+</ul>
+<p>比如说，你想把<code>&lt;p&gt;</code>作为一个文本在页面上显示，直接写<code>&lt;p&gt;</code>是肯定不行的，因为这代表的是一个段落标签，所以这里需要用到<strong>转义字符</strong>。应该这么写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个HTML语言的<span class="symbol">&amp;lt;</span>p<span class="symbol">&amp;gt;</span>标签</span><br></pre></td></tr></table></figure>
+
+<h4 id="下划线、中划线、斜体"><a href="#下划线、中划线、斜体" class="headerlink" title="下划线、中划线、斜体"></a>下划线、中划线、斜体</h4><ul>
+<li><code>&lt;u&gt;</code>：下划线标记</li>
+<li><code>&lt;s&gt;</code>或<code>&lt;del&gt;</code>：中划线标记（删除线）</li>
+<li><code>&lt;i&gt;</code>或<code>&lt;em&gt;</code>：斜体标记</li>
+</ul>
+<p>上面的这几个标签，常用于做一些小装饰、小图标。比如：<img src="http://img.smyhvae.com/20180118_2340.png" alt="img"></p>
+<p>这张图中，我们通过查看京东网站的代码发现，箭头处的小图标都是用的标签<code>&lt;i&gt;</code>。</p>
+<blockquote>
+<p>我也不知道是怎么实现的就是了</p>
+</blockquote>
+<h4 id="粗体标签-lt-b-gt-或-lt-strong-gt-（已废弃）"><a href="#粗体标签-lt-b-gt-或-lt-strong-gt-（已废弃）" class="headerlink" title="粗体标签&lt;b&gt;或&lt;strong&gt;（已废弃）"></a>粗体标签<code>&lt;b&gt;</code>或<code>&lt;strong&gt;</code>（已废弃）</h4><h4 id="字体标签-lt-font-gt-（已废弃）"><a href="#字体标签-lt-font-gt-（已废弃）" class="headerlink" title="字体标签&lt;font&gt;（已废弃）"></a>字体标签<code>&lt;font&gt;</code>（已废弃）</h4><p>属性：</p>
+<ul>
+<li><code>color=&quot;红色&quot;</code>或<code>color=&quot;#ff00cc&quot;</code>或<code>color=&quot;new rgb(0,0,255)&quot;</code>：设置字体颜色。 设置方式：单词 \ #ff00cc \ rgb(0,0,255)</li>
+<li><code>size</code>：设置字体大小。 取值范围只能是：1至7。取值时，如果取值大于7那就按照7来算，如果取值小于1那就按照1来算。如果想要更大的字体，那就只能通过css样式来解决。</li>
+<li><code>face=&quot;微软雅黑&quot;</code>：设置字体类型。</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">&quot;微软雅黑&quot;</span> <span class="attr">color</span>=<span class="string">&quot;#FF0000&quot;</span> <span class="attr">size</span>=<span class="string">&quot;10&quot;</span>&gt;</span>vae<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="http://img.smyhvae.com/2015-10-01-cnblogs_html_10.png" alt="Paste_Image.png"></p>
+<h4 id="上下标-lt-sup-gt-lt-sub-gt"><a href="#上下标-lt-sup-gt-lt-sub-gt" class="headerlink" title="上下标&lt;sup&gt; &lt;sub&gt;"></a>上下标<code>&lt;sup&gt;</code> <code>&lt;sub&gt;</code></h4><p>除了可以通过转义字符直接打出上下标，我们也可以通过标签来将任何我们需要的东西打成上下标</p>
+<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3>
       
 
       
@@ -365,7 +451,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E6%A0%87%E7%AD%BE-%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE"><span class="toc-number">1.</span> <span class="toc-text">HTML标签-排版标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.</span> <span class="toc-text">标题标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A%E6%A0%87%E7%AD%BE"><span class="toc-number">1.2.</span> <span class="toc-text">注释标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%87%E7%AD%BE-lt-p-gt"><span class="toc-number">1.3.</span> <span class="toc-text">段落标签&lt;p&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E7%BA%BF%E6%A0%87%E7%AD%BE-lt-hr-gt"><span class="toc-number">1.4.</span> <span class="toc-text">水平线标签&lt;hr&#x2F;&gt;</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E6%A0%87%E7%AD%BE-%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE"><span class="toc-number">1.</span> <span class="toc-text">HTML标签-排版标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E6%A0%87%E7%AD%BE"><span class="toc-number">1.1.</span> <span class="toc-text">标题标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A%E6%A0%87%E7%AD%BE"><span class="toc-number">1.2.</span> <span class="toc-text">注释标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%87%E7%AD%BE-lt-p-gt"><span class="toc-number">1.3.</span> <span class="toc-text">段落标签&lt;p&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E7%BA%BF%E6%A0%87%E7%AD%BE-lt-hr-gt"><span class="toc-number">1.4.</span> <span class="toc-text">水平线标签&lt;hr&#x2F;&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE-lt-br-gt"><span class="toc-number">1.5.</span> <span class="toc-text">换行标签&lt;br\&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lt-div-gt-%E5%92%8C-lt-span-gt-%E6%A0%87%E7%AD%BE"><span class="toc-number">1.6.</span> <span class="toc-text">&lt;div&gt;和&lt;span&gt;标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#div%E5%92%8Cspan%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.6.1.</span> <span class="toc-text">div和span的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E5%B1%85%E4%B8%AD%E6%A0%87%E7%AD%BE-lt-center-gt"><span class="toc-number">1.7.</span> <span class="toc-text">内容居中标签&lt;center&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%AE%9A%E4%B9%89%EF%BC%88%E9%A2%84%E6%A0%BC%E5%BC%8F%E5%8C%96%EF%BC%89%E6%A0%87%E7%AD%BE-lt-pre-gt"><span class="toc-number">1.8.</span> <span class="toc-text">预定义（预格式化）标签&lt;pre&gt;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E6%A0%87%E7%AD%BE-%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">2.</span> <span class="toc-text">HTML标签-字体标签和超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE"><span class="toc-number">2.1.</span> <span class="toc-text">字体标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%EF%BC%88%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%EF%BC%89"><span class="toc-number">2.1.1.</span> <span class="toc-text">特殊字符（转义字符）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF%E3%80%81%E4%B8%AD%E5%88%92%E7%BA%BF%E3%80%81%E6%96%9C%E4%BD%93"><span class="toc-number">2.1.2.</span> <span class="toc-text">下划线、中划线、斜体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B2%97%E4%BD%93%E6%A0%87%E7%AD%BE-lt-b-gt-%E6%88%96-lt-strong-gt-%EF%BC%88%E5%B7%B2%E5%BA%9F%E5%BC%83%EF%BC%89"><span class="toc-number">2.1.3.</span> <span class="toc-text">粗体标签&lt;b&gt;或&lt;strong&gt;（已废弃）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE-lt-font-gt-%EF%BC%88%E5%B7%B2%E5%BA%9F%E5%BC%83%EF%BC%89"><span class="toc-number">2.1.4.</span> <span class="toc-text">字体标签&lt;font&gt;（已废弃）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87-lt-sup-gt-lt-sub-gt"><span class="toc-number">2.1.5.</span> <span class="toc-text">上下标&lt;sup&gt; &lt;sub&gt;</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">2.2.</span> <span class="toc-text">超链接</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
